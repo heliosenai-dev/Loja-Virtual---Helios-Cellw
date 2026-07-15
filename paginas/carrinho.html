@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+
+    <!-- Faz seu comentário -->
+    <!--LINK PARA ADICIONAR O FAVICON-->
+    <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
+
+    <!--LINK PARA O ARQUIVO -->
+    <link rel="stylesheet" href="../css/style_carrinho.css">
+
+    <!--LINK PARA O SCRIPT monta_tela_carrinho.js-->
+    <script type="module" src="../js/manta_tela_carrinho.js" defer></script>
+    
+</head>
+
+<body>
+    <main id="geral">
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../imagens/icones/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html" class="lnk_menu"> Home </a></li>
+                    <li><a href="../paginas/cadastro.html" class="lnk_menu"> Cadastro </a></li>
+                    <li><a href="../paginas/sobre.html" class="lnk_menu">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <div id="div-icones">
+                <ul>
+                    <li><a href="login.html" class="lnk_icone"><img src="../imagens/icones/login.png" alt=""></a>
+                    </li>
+                    <li><a href="carrinho.html" class="lnk_icone"><img src="../imagens/icones/carrinho.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="pesquisa">
+            <input type="text" name="pesquisa" id="pesquisa" placeholder="Digite seu produto">
+        </section>
+
+        <section id="carrinho">
+            <section id="itens-carrinho">
+                <section class="item">
+                    <img src="../imagens/cesto01.jpg" alt="cesto01" class="img-item">
+                    <p class="descricao"> Cesto 01</p>
+                    <p class="vlr-unitario">R$ 45.00 Kg</p>
+                    <input type="number" name="quant01" id="quant01" class="input-item" value="1">
+                    <p class="tot-item">R$ 45,00</p>
+                    <img src="../imagens/icones/remover.png" alt="" class="img-remover">
+                </section>
+
+                <section class="item">
+                    <img src="../imagens/cesto01.jpg" alt="cesto01" class="img-item">
+                    <p class="descricao"> Cesto 01</p>
+                    <p class="vlr-unitario">R$ 45.00 Kg</p>
+                    <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                    <p class="tot-item">R$ 45,00</p>
+                    <img src="../imagens/icones/remover.png" alt="" class="img-remover">
+                </section>
+
+                <section class="item">
+                    <img src="../imagens/cesto01.jpg" alt="cesto01" class="img-item">
+                    <p class="descricao"> Cesto 01</p>
+                    <p class="vlr-unitario">R$ 45.00 Kg</p>
+                    <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                    <p class="tot-item">R$ 45,00</p>
+                    <img src="../imagens/icones/remover.png" alt="" class="img-remover">
+                </section>
+
+                <section class="item">
+                    <img src="../imagens/cesto01.jpg" alt="cesto01" class="img-item">
+                    <p class="descricao"> Cesto 01</p>
+                    <p class="vlr-unitario">R$ 45.00 Kg</p>
+                    <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                    <p class="tot-item">R$ 45,00</p>
+                    <img src="../imagens/icones/remover.png" alt="" class="img-remover">
+                </section>
+
+                
+            </section>
+
+            <div id="valores-carrinho">
+                <div id="div-cep">
+                    <h2 class="titulo-valores-carrinho">CEP</h2>
+                    <div id="input-cep"><input type="text" name="input-cep" id="input-cep" class="input-cep"></div>
+                </div>
+
+                <div id="div-calc-valor">
+                    <h2 class="titulo-valores-carrinho">Valor Total</h2>
+                    <p id="valor-total" class="valor">R$ 100,00</p>
+
+                    <h2 class="titulo-valores-carrinho">Valor Frete</h2>
+                    <p id="valor-total" class="valor">R$ 10,00</p>
+                </div>
+
+                <div id="div-calc-valor-pagar">
+                    <h2 class="titulo-valores-carrinho">Total a Pagar</h2>
+                    <p id="valor-Pagar" class="valor">R$ 100,00</p>
+                </div>
+
+                <button id="btn-continuar" class="btn-carrinho">Continuar Compra</button>
+                <button id="btn-finalizar" class="btn-carrinho">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <footer id="rodape">
+            <div id="dadosloja">
+                <h2>Rua sei la das quantas, 1001 - Centro</h2>
+                <h1>Aracaju - Sergipe</h1>
+            </div>
+
+            <div id="icones-sociais">
+                <ul>
+                    <li><a href="https://www.instagram.com/seu_usuario"><img src="../imagens/icones/instagram.png"
+                                alt=""></a></li>
+                    <li><a href="https://www.facebook.com/seu_usuario"><img src="../imagens/icones/x.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="div-cartoes">
+                <img src="../imagens/icones/hipercard.png" alt="Hipercard">
+                <img src="../imagens/icones/visa.png" alt="Visa">
+                <img src="../imagens/icones/master_card.png" alt="Mastercard">
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
