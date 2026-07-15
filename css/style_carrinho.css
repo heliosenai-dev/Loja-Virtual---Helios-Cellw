@@ -1,69 +1,314 @@
-@import url(style_estrutura_paginas.css);
-
-#carrinho{
-    background-color: aqua;
-    width: 1000px;
-    min-height: 750px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+/* ==========================================
+   1. CONFIGURAÇÕES GERAIS / RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.item{
-    width: 600px;
-    height: 150px;
-    margin: 20px 0px;
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container Geral */
+#geral {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ==========================================
+   2. CABEÇALHO & MENU
+   ========================================== */
+#cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#logo img {
+    height: 40px;
+}
+
+#menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.lnk_menu {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.lnk_menu:hover {
+    color: #007bff;
+}
+
+#div-icones ul {
+    display: flex;
+    gap: 15px;
+}
+
+.lnk_icone img {
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.lnk_icone img:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   3. BARRA DE PESQUISA
+   ========================================== */
+#pesquisa {
+    display: flex;
+    justify-content: center;
+}
+
+#pesquisa input {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#pesquisa input:focus {
+    border-color: #007bff;
+}
+
+/* ==========================================
+   4. SEÇÃO DO CARRINHO (LAYOUT PRINCIPAL)
+   ========================================== */
+#carrinho {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    #carrinho {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Itens do Carrinho */
+#itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    border-bottom: 2px solid var(--cor_suave);
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.img-item{
-    width: 60px;
-    height: 60px;
-}
-
-.input-item{
-    width: 60px;
-    height: 30px;
-    text-align: center;
+.img-item {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
-.img-remover{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+.descricao {
+    font-weight: bold;
+    flex: 1;
+    margin-left: 15px;
 }
 
-#valores-carrinho{
-    width: 550px;
-    min-height: 450px;
-    margin: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
+.vlr-unitario {
+    color: #666;
+    margin: 0 15px;
 }
 
-#valores-carrinho h2{
-    margin: 20px 0px;
+.input-item {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     text-align: center;
 }
 
-.valor{
-    background-color: aqua;
-    width: 100%;
-    text-align: end;
+.tot-item {
+    font-weight: bold;
+    color: #28a745;
+    margin: 0 15px;
+    min-width: 80px;
+    text-align: right;
 }
 
-button{
-    width: 150px;
-    height: 40px;
-    margin: 10px 0px;
+.img-remover {
+    width: 24px;
     cursor: pointer;
-    border-radius: 5px;
-    border: none;
+    transition: opacity 0.2s;
 }
 
+.img-remover:hover {
+    opacity: 0.7;
+}
+
+/* Painel de Valores (Direita) */
+#valores-carrinho {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+}
+
+.titulo-valores-carrinho {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.input-cep {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.valor {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#div-calc-valor-pagar {
+    border-top: 2px dashed #eee;
+    padding-top: 15px;
+}
+
+#valor-Pagar {
+    font-size: 24px;
+    color: #28a745;
+}
+
+/* Botões do Carrinho */
+.btn-carrinho {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-continuar {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#btn-continuar:hover {
+    background-color: #e0e0e0;
+}
+
+#btn-finalizar {
+    background-color: #28a745;
+    color: white;
+}
+
+#btn-finalizar:hover {
+    background-color: #218838;
+}
+
+/* ==========================================
+   5. RODAPÉ (FOOTER)
+   ========================================== */
+#rodape {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#dadosloja h1 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#dadosloja h2 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #ccc;
+}
+
+#icones-sociais ul {
+    display: flex;
+    gap: 15px;
+}
+
+#icones-sociais img {
+    height: 30px;
+    filter: invert(1); /* Deixa os ícones brancos para combinar com o fundo escuro */
+}
+
+#div-cartoes {
+    display: flex;
+    gap: 10px;
+}
+
+#div-cartoes img {
+    height: 30px;
+    background-color: white;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+/* Ajustes Responsivos do Rodapé */
+@media (max-width: 600px) {
+    #rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #icones-sociais ul, #div-cartoes {
+        justify-content: center;
+    }
+}
