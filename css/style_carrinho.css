@@ -1,4 +1,7 @@
-#carrinho {
+@import url(style_estrutura_paginas.css);
+
+#carrinho{
+    background-color: aqua;
     width: 1000px;
     min-height: 750px;
     display: flex;
@@ -6,15 +9,9 @@
     justify-content: space-between;
 }
 
-#itens-carrinho {
-    width: 680px;
-    margin: 20px 10px;
-    min-height: 750px;
-}
-
-.item {
+.item{
     width: 600px;
-    height: 100px;
+    height: 150px;
     margin: 20px 0px;
     display: flex;
     align-items: center;
@@ -22,25 +19,25 @@
     border-bottom: 2px solid var(--cor_suave);
 }
 
-.img-item {
+.img-item{
     width: 60px;
     height: 60px;
 }
 
-.input-item {
+.input-item{
     width: 60px;
     height: 30px;
     text-align: center;
     border-radius: 8px;
 }
 
-.img-remover {
-    width: 15px;
-    height: 15px;
+.img-remover{
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
-#valores-carrinho {
+#valores-carrinho{
     width: 550px;
     min-height: 450px;
     margin: 20px 10px;
@@ -50,16 +47,18 @@
     padding: 15px;
 }
 
-#valores-carrinho h2 {
+#valores-carrinho h2{
     margin: 20px 0px;
     text-align: center;
 }
 
 .valor{
-    text-align: center;
+    background-color: aqua;
+    width: 100%;
+    text-align: end;
 }
 
-button {
+button{
     width: 150px;
     height: 40px;
     margin: 10px 0px;
@@ -68,10 +67,3 @@ button {
     border: none;
 }
 
-#btn-continuar {
-    background-color: var(--cor_suave);
-}
-
-#btn-finalizar {
-    background-color: var(--cor_principal);
-}
