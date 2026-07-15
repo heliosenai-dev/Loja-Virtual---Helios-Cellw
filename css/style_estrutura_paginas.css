@@ -82,7 +82,7 @@ body {
     padding: 12px 20px;
     font-size: 16px;
     border: 2px solid #ddd;
-    border-radius: 25px; /* Bordas arredondadas estilo Google */
+    border-radius: 25px; /* Bordas estilo Google */
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -95,7 +95,7 @@ body {
 /*PRODUTOS (CARDS) */
 #cards {
     display: grid;
-    /* colunas automáticas de no mínimo 220px que se ajustam à tela */
+    
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 25px;
     margin-bottom: 50px;
@@ -121,7 +121,7 @@ body {
 .img_card {
     max-width: 100%;
     height: 180px;
-    object-fit: contain; /* Garante que a foto do celular não fique distorcida */
+    object-fit: contain; 
     margin-bottom: 15px;
 }
 
@@ -189,7 +189,7 @@ body {
 #icones_sociais img {
     height: 30px;
     width: auto;
-    filter: invert(1); /* Deixa os ícones pretos em formato branco para contrastar */
+    filter: invert(1); /* Deixa os ícones pretos em formato branco */
     transition: opacity 0.2s;
 }
 

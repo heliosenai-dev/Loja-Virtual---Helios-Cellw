@@ -7,6 +7,21 @@ const itensCarrinho = JSON.parse(localStorage.getItem('itensSessao')) || []
 
 //const itensCarrinho = JSON.parse(sessionStorage.getItem('itensSessao')) || []
 
+//CRIANDO ARROW ITEM
+const item =(objProduto) => {
+    const item = {
+        id_produto: objProduto.id_produto,
+        descricao_produto: objProduto.descricao_produto,
+        caminho_da_imagem: objProduto.caminho_da_imagem,
+        valor_unitario: objProduto.valor_unitario,
+        quantidade: 1
+    }
+    return item
+
+
+}
+
+
 
 //FUNÇÃO PARA ADCIONAR O ITEM NO ARRAY
 const addItem = (objItem) => {

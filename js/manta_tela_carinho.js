@@ -13,7 +13,7 @@ const montaTelaCarrinho = () => {
         sectionItem.innerHTML = `<img src='${elem.caminho_da_imagem}' alt=${elem.descricao_produto} class='img-item'/> 
         <p class='descricao'>${elem.descricao_produto}</p> 
         <p class='vlr-unitario'>${elem.valor_unitario}</p> 
-        <input type="number" name='quant${i}' id='quant${i}' class="input-item" value=${1}> 
+        <input type="number" name='quant${i}' id='quant${i}' class="input-item" value=${elem.quantidade}> 
         <p class="tot-item">${elem.valor_unitario * 1}</p>`
 
         const imgRemover = document.createElement('img')
