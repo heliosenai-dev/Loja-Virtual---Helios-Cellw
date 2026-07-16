@@ -1,4 +1,5 @@
 import { listItens, removeItem } from "./carrinho.js";
+import { produtos } from "./produtos.js";
 
 //MONTANDO A TELA CARRINHO
 const montaTelaCarrinho = () => {
@@ -7,14 +8,18 @@ const montaTelaCarrinho = () => {
 
     sectionItensCarrinho.innerHTML = ''
 
-    listItens().forEach((elem, i) => {
+    listItens().forEach((itemCarrinho, i) => {
+        const produto = produtos.find((produto) => {
+            return produto.id_produto == itemCarrinho.id_produto;
+        });
+
         const sectionItem = document.createElement('section')
         sectionItem.setAttribute('class', 'item')
-        sectionItem.innerHTML = `<img src='${elem.caminho_da_imagem}' alt=${elem.descricao_produto} class='img-item'/> 
-        <p class='descricao'>${elem.descricao_produto}</p> 
-        <p class='vlr-unitario'>${elem.valor_unitario}</p> 
-        <input type="number" name='quant${i}' id='quant${i}' class="input-item" value=${elem.quantidade}> 
-        <p class="tot-item">${elem.valor_unitario * 1}</p>`
+        sectionItem.innerHTML = `<img src='${produto.caminho_da_imagem}' alt=${produto.descricao_produto} class='img-item'/> 
+        <p class='descricao'>${produto.descricao_produto}</p> 
+        <p class='vlr-unitario'>${produto.valor_unitario}</p> 
+        <input type="number" name='quant${i}' id='quant${i}' class="input-item" value=${itemCarrinho.quantidade}> 
+        <p class="tot-item">${produto.valor_unitario * 1}</p>`
 
         const imgRemover = document.createElement('img')
         imgRemover.setAttribute('src','../imagens/icones/remover.png')
@@ -22,7 +27,7 @@ const montaTelaCarrinho = () => {
         imgRemover.setAttribute('class', 'img-remover')
 
         imgRemover.addEventListener('click',()=>{
-            if(confirm(`Deseja remover ${elem.descricao_produto} da sua lista? `)){
+            if(confirm(`Deseja remover ${itemCarrinho.descricao_produto} da sua lista? `)){
                 removerItemCarrinho(i)
             }
             

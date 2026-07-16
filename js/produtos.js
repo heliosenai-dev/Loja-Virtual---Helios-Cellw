@@ -3,7 +3,7 @@ const produtos = [
     {
         id_produto: 1,
         descricao_produto: "Samsung Galaxy S26 Ultra",
-        caminho_da_imagem: "imagens/Galaxy_S26_Ultra.jpg",
+        caminho_da_imagem: "/imagens/Galaxy_S26_Ultra.jpg",
         valor_unitario: 7499.90,
         id_secao: 1,
         nome_secao: "Smartphones"
@@ -11,7 +11,7 @@ const produtos = [
     {
         id_produto: 2,
         descricao_produto: "Galaxy A06",
-        caminho_da_imagem: "imagens/Galaxy_A06.jpg",
+        caminho_da_imagem: "/imagens/Galaxy_A06.jpg",
         valor_unitario: 9999.90,
         id_secao: 1,
         nome_secao: "Smartphones"

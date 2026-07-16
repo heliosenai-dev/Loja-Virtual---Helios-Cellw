@@ -25,7 +25,13 @@ const item =(objProduto) => {
 
 //FUNÇÃO PARA ADCIONAR O ITEM NO ARRAY
 const addItem = (objItem) => {
-    itensCarrinho.push(objItem)
+    const item = itensCarrinho.find(i => i.id_produto === objItem.id_produto);
+
+    if (item) {
+        item.quantidade++;
+    } else {
+        itensCarrinho.push({ id_produto: objItem.id_produto, quantidade: 1 });
+    }
 
     localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
     //sessionStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
@@ -35,6 +41,7 @@ const addItem = (objItem) => {
 const listItens = () => {
 
     const itensSelecionados = JSON.parse(localStorage.getItem('itensSessao')) || []
+    
 
     //const itensSelecionados = JSON.parse(sessionStorage.getItem('itensSessao')) || []
 
@@ -52,3 +59,4 @@ const removeItem = (pos)=>{
 
 
 export { addItem, listItens, removeItem }
+
