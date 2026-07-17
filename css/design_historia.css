@@ -1,0 +1,41 @@
+#historia{
+    background-color: rgb(223, 243, 243);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#historia p{
+    background: none;
+    margin-bottom: 20px;
+}
+
+p{
+    font-family: helvetica, sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 35px;
+    background-color: rgb(241, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+
+#titulo-historia{
+    width: 920px;
+    height: 200px;
+    background-color: rgb(19, 16, 199);
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+
+    margin:10px auto;       
+}
+
+#titulo-historia h3{
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+}

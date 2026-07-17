@@ -17,9 +17,9 @@ const montaTelaCarrinho = () => {
         sectionItem.setAttribute('class', 'item')
         sectionItem.innerHTML = `<img src='${produto.caminho_da_imagem}' alt=${produto.descricao_produto} class='img-item'/> 
         <p class='descricao'>${produto.descricao_produto}</p> 
-        <p class='vlr-unitario'>${produto.valor_unitario}</p> 
+        <p class='valor-unitario'>${produto.valor_unitario}</p> 
         <input type="number" name='quant${i}' id='quant${i}' class="input-item" value=${itemCarrinho.quantidade}> 
-        <p class="tot-item">${produto.valor_unitario * 1}</p>`
+        <p class="tot-item">${produto.valor_unitario * itemCarrinho.quantidade}</p>`
 
         const imgRemover = document.createElement('img')
         imgRemover.setAttribute('src','../imagens/icones/remover.png')

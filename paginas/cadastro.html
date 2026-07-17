@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helios Cell - Cadastro</title>
 
+    <link rel="shortcut icon" href="/imagens/icones/favecon.ico" type="image/x-icon"> <!-- favecon.ico: Para colocar logo na aba da página -->
+    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_formulario.css">
+    
+</head>
+<body>
+    <main id="geral">
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../imagens/icones/casa.png" alt="logo">
+                </a>
+            </div>
+
+  <!-- nav: para construção de menu--><nav id="menu">
+                <ul>
+                    <li><a href="/index.html" class="lnk_menu"  > Home </a></li>
+                    <li><a href="paginas/cadastro.html" class="lnk_menu"> Cadastro</a></li> <!-- class para ser exclusivo o design no css-->
+                    <li><a href="../sobre_nos.html" class="lnk_menu">Sobre</a></li>        
+                </ul>
+            </nav>
+            <div id="div-icones">
+                <ul>
+                    <li><a href="/paginas/login.html" class="lnk_icone"><img src="imagens/icones/casa.png" alt=""></a></li>
+                    <li><a href="../carrinho.html" class="lnk_icone"><img src="imagens/icones/carrinho de compra.png" alt=""></a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <section id="pesquisa">
+                <input type="text" name="pesquisa" id="pesquisa" placeholder="Digite seu produto">
+        </section>
+
+        <section id="formulario">
+            <h3>Cadastro</h3>
+
+            <form id="form-pessoa">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="input01" required maxlength="60" placeholder="digite seu nome">
+
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="input01" required maxlength="60" placeholder="digite seu cpf">
+
+                <label for="data-nascimento">data de nascimento</label>
+                <input type="text" name="data-nascimento" id="data-nascimento" class="input01" required>
+
+                <label for="sexo">Sexo</label>
+                <input type="radio" name="sexo" id="sexoM" class="inputOP" value="M"> Masculino
+                <input type="radio" name="sexo" id="sexoF" class="inputOP" value="F"> Feminino
+                <input type="radio" name="sexo" id="sexoN" class="inputOP" value="N"> Não declarar
+
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" class="input02" required maxlength="9" placeholder="Digite seu CEP">
+
+                <div id="div-dados-endereço" class="oculto">
+                    <label for="logradouro">logradouro</label>
+                    <input type="text" name="logradouro" id="logradouro" class="input01">
+
+                    <label for="num-residencia">Número</label>
+                    <input type="text" name="logradouro" id="logradouro" class="input02" maxlength="10" placeholder="digite o número da residencia" required>
+
+                    <label for="complemento-end">complemento</label>
+                    <input type="text" name="complemento-end" id="complemento-end" class="input01" maxlength="100">
+
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" class="input01">
+
+                    <label for="localidade">localidade</label>
+                    <input type="text" name="localidade" id="localidade" class="input01">
+
+                    <label for="uf">uf</label>
+                    <input type="text" name="uf" id="uf" class="input01">
+
+                </div>
+
+                <label for="senha">Senha</label>
+                <input type="passq" name="senha" id="senha" class="input02" required maxlength="6" placeholder="informe a seha">
+
+                <div id="div-btns">
+                    <button type="submit" id="btn-add"> Cadastra </button>
+                    <button type="reset" id="btn-limpar">Limpar</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <footer id="rodape">
+            <div id="dadosloja">
+                <h2>Rua sei la das quantas, 1001 - Centro</h2>
+                <h1>Aracaju - Sergipe</h1>
+            </div>
+
+            <div id="icones_sociais">
+                <ul>
+                    <li><a href="https://www.instagram.com/seu_usuario"><img src="imagens/icones/@.png" alt=""></a></li>
+                    <li><a href="https://www.tiktok.com/seu_usuario"><img src="imagens/icones/@.png" alt=""></a></li>
+                </ul>
+
+            </div>
+
+            <div id="div-cartoes">
+                <img src="imagens/icones/images.jfif" alt="Visa">
+                <img src="imagens/icones/inter.png" alt="Inter">
+                <img src="imagens/icones/nubank.jfif" alt="nubank">
+            </div>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
